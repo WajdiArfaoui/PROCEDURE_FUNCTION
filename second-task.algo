@@ -1,0 +1,11 @@
+PROCEDURE insertion-sort(arr : ARRAY ; i,n : INTEGER)
+VAR
+    arr : ARRAY_OF INTEGER;
+    i,n : INTEGER;
+BEGIN
+    FOR i FROM 0 TO n STEP step  DO
+        IF (arr[i] > arr[i+1]) THEN
+            swap (arr[i],arr[i+1])
+        END_IF
+    END_FOR
+END

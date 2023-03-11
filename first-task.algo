@@ -1,0 +1,30 @@
+FUNCTION dot_product(v1,v2 : ARRAY ; n1 : INTEGER) : INTEGER
+VAR
+    v1,v2 : ARRAY_OF INTEGER;
+    i,dot : INTEGER ;
+BEGIN
+FOR i FROM 0 TO n1 STEP step DO
+    dot := dot + v1[i]*v2[i];
+END_FOR
+    RETURN dot ;
+END
+
+
+
+
+ALGORITHM ortho
+VAR
+    v1,v2 : ARRAY_OF INTEGER;
+    dot,n1,n2 : INTEGER;
+BEGIN
+    REPEAT
+        Read(n1)
+        Read(n2)
+    UNTIL (n1=n2)
+    dot:= dot_product(v1,v2,n1)
+    IF (dot=0) THEN
+        Write('V1 and V2 are orthogonal')
+        ELSE 
+        Write('V1 and V2 are not orthogonal')
+    END_IF
+END
